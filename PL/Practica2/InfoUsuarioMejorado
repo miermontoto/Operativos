@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ $# -gt 1 -o $# -lt 1 ]; then
+	echo "El numero de parametros es incorrecto."
+	echo "USO: $0 <usuario>"
+	exit 1
+fi
+if ! ./ExisteUsuario $1 >/dev/null; then
+	echo "El usuario $1 no existe"
+	exit 1
+fi
+user=$(getent passwd | grep "^$1:.*$")
+echo "Informacion del usuario $1:"
+printf "UID: "
+echo $user | cut -d ':' -f 3
+printf "GID: "
+echo $user | cut -d ':' -f 4
+printf "Directorio personal: "
+echo $user | cut -d ':' -f 6
+printf "Interprete de comandos: "
+echo $user | cut -d ':' -f 7

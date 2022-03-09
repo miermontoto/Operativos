@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ $# -ne 1 ]; then
+	echo "El numero de parametros es incorrecto."
+	echo "USO: $0 <usuario>"
+	exit 1
+fi
+
+ps uawx | grep "^$1 .*$"

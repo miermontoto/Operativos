@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ $# -lt 1 ]; then
+	echo "El numero de parametros es incorrecto."
+	echo "USO: $0 <usuario1> ... <usuarioN>"
+	exit 1
+fi
+for i; do
+	./InfoUsuario $i
+	echo
+done

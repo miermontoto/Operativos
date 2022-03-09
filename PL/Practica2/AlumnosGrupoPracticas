@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+	echo "El numero de parametros es incorrecto."
+	echo "USO: $0 <fichero> <grupo>"
+	exit 1
+fi
+
+if [ ! -r $1 ] ; then
+	echo "El archivo no existe o no se puede leer."
+	exit 1
+fi
+
+echo "La lista de alumnos que pertenecen al grupo de practicas $2 es:"
+grep "^.*;.*;.*;.*;$2" $1 | cut -d ';' -f3
+exit 0

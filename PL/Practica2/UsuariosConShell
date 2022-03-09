@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ $# -gt 1 -o $# -lt 1 ]; then
+	echo "El numero de parametros es incorrecto"
+	echo "USO: $0 <shell>"
+	exit 1
+fi
+echo "La lista de usuarios con el shell $1 es:"
+
+getent passwd | cut -f 1,7 -d ':' | grep "^.*:$1" | cut -f 1 -d ':'

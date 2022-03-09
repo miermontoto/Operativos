@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+	echo "Numero incorrecto de parametros."
+	echo "USO: $0 <usuario>"
+	exit 1
+fi
+
+if [ $(getent passwd | cut -d: -f1 | grep -c $1) -eq 0 ]; then
+	echo "El usuario NO $1 pertenece al sistema."
+	exit 1
+else
+	echo "El usuario $1 pertenece al sistema."
+	exit 0
+fi

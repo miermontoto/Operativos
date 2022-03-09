@@ -1,0 +1,3 @@
+#!/bin/bash
+var=$(getent passwd | wc -l)
+echo "El sistema tiene $var usuarios"
