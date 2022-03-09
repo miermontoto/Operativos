@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# Añade el archivo de nombre dado por el segundo argumento (opcional)
+# al final del archivo dado por el primer argumento (obligatorio).
+# Finalmente, muestra el contenido del primer archivo.
+# Uso: $0 <fich1> [<fich2>]
+#
+
+case "$#" in
+   1)	cat "$1"
+	exit "$?"
+	;;
+   2)	if test -f "$1" -a -w "$1"
+	then
+		if cat "$2" >> "$1"
+		then
+			cat "$1"
+			exit "$?"
+		else
+			exit "1"
+		fi
+	else
+		echo "$0: $1: No such file or permission denied" >&2
+		exit "1"
+	fi
+	;;
+   *)	echo "Uso: $0 <fich1> [<fich2>]" >&2
+	exit "1"
+esac

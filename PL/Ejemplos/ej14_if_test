@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Esto comprueba que hayan llamado a este shell-script indicando un
+# único argumento
+if test "$#" -ne "1"	# Obsérvese que estamos tratando a $# como un número entero
+then
+	echo "Debes indicar un único argumento al llamar a este shell-script"
+	echo "USO: $0 <argumento>"
+	exit 1
+fi
+	
+# Este ejemplo muestra que es posible utilizar Y (and); O (or) con el comando test
+# Comprobamos si el primer argumento es un número comprendido en el intervalor (0,10]
+# OBSERVESE EL USO DEL ! ANTES DE TEST que niega el predicado (el valor devuelto por test)
+if ! test "$1" -gt "0" -a "$1" -le "10"
+then
+	echo "El primer argumento debe ser un número entero entre 0 (excluido) y 10."
+	exit 1
+fi
+echo "¡¡CORRECTO!!"
+exit 0

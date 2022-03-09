@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# Este shell-script muestra valores que va tomando $<n> con distintos ejemplos
+# mostrándolos con el for
+
+# NO LEER TODAVÍA EL CODIGO DE ESTE SHELL-SRIPT. PRIMERO EJECUTALO Y OBSERVA
+# LA SALIDA QUE PRODUCE
+# POSTERIORMENTE MIRA CON CALMA EL CÓDIGO
+
+echo "Obsérvese que el for funciona incorrectamente cuando los parámetros"
+echo "tienen espacios en blanco aunque se pongan entre comillas dobles"
+echo ""
+echo "./ej05_ForArgumentos"
+./ej05_ForArgumentos
+echo ""
+echo "./ej05_ForArgumentos hola"
+./ej05_ForArgumentos hola
+echo ""
+echo './ej05_ForArgumentos "hola a todo el " mundo'
+./ej05_ForArgumentos "hola a todo el " "mundo"
+echo ""
+echo './ej05_ForArgumentos "Esto es una prueba"'
+./ej05_ForArgumentos "Esto es una prueba"

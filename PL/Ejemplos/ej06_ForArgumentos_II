@@ -1,0 +1,59 @@
+#!/bin/sh
+#
+# Ejemplo para entender el uso de listas y de los argumentos que se pasan 
+# al script
+#
+# Ejecuta el script con los argumentos: 1 "2 3" "4 5 6" 7
+
+# En un for, por defecto, la lista es la lista de argumentos
+echo "Bucle for sin 'in', por defecto, la lista de argumentos del script"
+
+for item
+do
+	echo "$item"
+done
+
+echo
+
+# For equivalente al for previo (sin lista), pero especificando la lista
+# de argumentos del script
+echo "Bucle for con la lista \"\$@\", que es la lista de argumentos del script"
+
+for item in "$@"
+do
+	echo "$item"
+done
+
+echo 
+
+# Pasar al bucle for los argumentos indicados al principio es equivalente
+# a ejecutar éste con la lista: 1 "2 3" "4 5 6" 7
+echo "Bucle for para la lista explicitada: 1 \"2 3\" \"4 5 6\" 7"
+echo "observa que en el for los elementos de la lista no van entrecomillados"
+
+for item in 1 "2 3" "4 5 6" 7
+do
+	echo "$item"
+done
+
+echo 
+
+# Para cualquier otra variable que contenga una lista, ésta debe indicarse en 
+# el for (tras la palabra reservada in) sin entrecomillar
+echo "Bucle for para la variable lista2 que tiene el valor \"/etc/*\""
+lista2="/etc/*"
+
+for item in $lista2
+do
+	echo "$item"
+done
+
+echo
+
+# que es equivalente a:
+
+for item in /etc/*
+do
+	echo "$item"
+done
+

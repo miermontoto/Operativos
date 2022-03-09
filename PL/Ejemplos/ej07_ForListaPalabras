@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Este shell script muestra el uso del for con listas de palabras
+
+sufijo="00 01 02 03 04 05 06 07 08 09"
+for i in $sufijo	# NO DEBEN USARSE LAS COMILLAS DOBLES
+do
+	echo $i
+done

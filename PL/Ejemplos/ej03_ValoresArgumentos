@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Este shell script muestra como se obtienen los valores de los argumentos
+# Si no hay argumentos suficientes las variables valdrán la cadena vacía
+# ""
+echo "$1 es el primer argumento"
+echo "$2 es el segundo argumento"
+echo "$3 es el tercer argumento"
+echo "$4 es el cuarto argumento"
+echo "$5 es el quinto argumento"
+echo "$6 es el sexto argumento"
+echo "$7 es el séptimo argumento"
+echo "$8 es el octavo argumento"
+echo "$9 es el noveno argumento"

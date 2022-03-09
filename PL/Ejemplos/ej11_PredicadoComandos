@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Este shell script muestra que TODOS los comandos devuelven cierto o falso
+# terminando con un exit <valor> (0 es cierto, valor mayor que cero es falso)
+# Para ello utilizamos la variable $? que muestra el código de salida del
+# último comando ejecutado
+
+# ES IMPORTANTE SABER QUE LOS PREDICADOS EN SHELL-SCRIPT SON SIEMPRE LA
+# EJECUCION DE UN COMANDO (ya que todos devuelven CIERTO Ó FALSO)
+
+echo "Esto tiene que devolver FALSO porque pepito no lo encuentra"
+echo "getent passwd | grep pepito"
+getent passwd | grep pepito
+echo "Valor del exit: $?"
+
+echo ""
+
+echo "Esto tiene que devolver CIERTO porque alex es un usuario"
+echo "getent passwd | grep alex"
+getent passwd | grep alex
+echo "Valor del exit: $?"
+

@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# Este shell-script ilustra el uso de variables
+
+# Asignación CORRECTA, se asigna un string
+var1="23"
+
+# Asignación INCORRECTA, no existen variables numéricas
+# En realidad esta asignación funciona porque la mayoría de
+# intérpretes asumen que se está asignando la cadena "23"
+# PERO ES MEJOR PONER SIEMPRE LAS COMILLAS DOBLES
+n=23
+
+# Para acceder al valor de una variable se usa el $
+echo $var1
+
+# Esto también accede al valor de una variable porque el 
+# intérprete siempre sustituye $var por su valor incluso
+# PONIENDOLA ENTRE COMILLAS
+# ESTE EJEMPLO SE CONSIDERA MEJOR QUE EL ANTERIOR 
+# HAY QUE USAR SIEMPRE LAS COMILLAS DOBLES
+echo "$var1"
+
+# Esta es la forma de concatenar strings
+echo "$var1 es un número impar"
+
+# Otro ejemplo de asignación y concatenación
+var2="es un número impar"
+echo "$var1 $var2"
+
+# Otro ejemplo de asignación y concatenación
+frase="$var1 $var2"
+echo "$frase"
+
+# Para hacer que las comillas dobles formen parte del valor se utiliza 
+# el apóstrofe
+var3='"Esto sale entre comillas"'
+echo "$var3"

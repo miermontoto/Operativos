@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# Este shell-script muestra el uso del comando test usado como predicado
+# Este comando permite comprobar si las variables tienen un determinado
+# valor e incluso tratar las variables de forma numérica si la cadena 
+# que contienen es un entero
+
+# También enseña que nuestros propios shell-scripts, que en realidad son
+# como un comando más, DEBEN USAR EL EXIT para indicar si hubo algún error,
+# RETORNAMOS FALSO, o si todo fue bien, RETORNAMOS CIERTO
+
+# Esto comprueba que hayan llamado a este shell-script indicando un
+# único argumento
+if test "$#" -ne "1"	# Obsérvese que estamos tratando a $# como un número entero
+then
+	echo "Debes indicar un único argumento al llamar a este shell-script"
+	echo "USO: $0 <argumento>"
+	exit 1
+fi
+	
+# Esto comprueba si el primer argumento tiene un determinado valor
+if test "$1" !=  "datos.txt"   # Obsérvese que estamos tratando a $1 como cadena de texto
+then
+	echo "El primer argumento debe ser datos.txt y es $1"
+	exit 1
+fi
+echo "¡¡CORRECTO!!"
+exit 0

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Este shell script muestra el código para
+# leer de la entrada estándar línea a línea
+# Las líneas leídas se almacenan en una variable
+# De esta forma es posible realizar una acción con
+# cada línea leída
+
+# read linea devolverá FALSO cuando no haya más líneas
+# para leer (se ha llegado a fin de fichero)
+while read linea
+do
+	# La variable linea contiene la línea leída
+	# desde la entrada estándar
+	
+	# Ahora se puede hacer lo que se quiera con la
+	# línea leída. En este ejemplo se vuelca directamente
+	# a la salida estándar
+	echo $linea
+	
+done

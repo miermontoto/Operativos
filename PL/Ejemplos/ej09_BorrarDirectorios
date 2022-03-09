@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Este shell script borra los directorios creados en CrearDirectorios
+
+# PARA QUE ESTE SHELL-SCRIPT TE FUNCIONE DEBERÁS COPIARLO AL MISMO DIRECTORIO 
+# DONDE COPIASTE EL SHELL-SCRIPT ANTERIOR
+
+sufijo="00 01 02 03 04 05 06 07 08 09"
+for i in $sufijo
+do
+	rm -fr "Usuario$i"
+done

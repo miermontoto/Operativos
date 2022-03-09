@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Este shell script muestra el uso del comando
+# read
+
+# read <variable>
+# Lee una línea de la entrada estándar y lo almacena
+# en la <variable> indicada
+#
+# read retorna CIERTO si pudo leer una línea
+# y FALSO si se encuentra con fin de fichero
+#
+echo "Introduce una línea cualquiera de texto"
+read linea
+echo "Has introducido la línea:"
+echo $linea

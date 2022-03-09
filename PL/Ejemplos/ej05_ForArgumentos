@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Este shell script muestra como se obtienen los valores de los argumentos
+# con un for (solo obtiene los que realmente se han puesto)
+echo "Has puesto los siguientes argumentos:"
+for i in $*	# NO DEBEN USARSE LAS COMILLAS DOBLES
+do
+	echo "$i"
+done

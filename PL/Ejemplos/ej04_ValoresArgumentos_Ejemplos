@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Este shell-script muestra valores que va tomando $<n> con distintos ejemplos
+# Se desea mostrar la importancia de usar comillas dobles y cómo afecta al valor
+# de los argumentos
+
+# NO LEER TODAVÍA EL CODIGO DE ESTE SHELL-SRIPT. PRIMERO EJECUTALO Y OBSERVA
+# LA SALIDA QUE PRODUCE
+# POSTERIORMENTE MIRA CON CALMA EL CÓDIGO
+
+echo "./ej03_ValoresArgumentos"
+./ej03_ValoresArgumentos
+echo ""
+echo "./ej03_ValoresArgumentos hola"
+./ej03_ValoresArgumentos hola
+echo ""
+echo './ej03_ValoresArgumentos "hola a todo el " mundo'
+./ej03_ValoresArgumentos "hola a todo el " "mundo"
+echo ""
+echo './ej03_ValoresArgumentos "Esto es una prueba"'
+./ej03_ValoresArgumentos "Esto es una prueba"

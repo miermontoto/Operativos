@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Este sell-script muestra el código
+# para procesar la salida de un comando
+# cualquiera LÍNEA A LÍNEA.
+# Con cada línea se puede realizar la acción
+# que se quiera.
+#
+# <cualquier_comando> | while read linea
+# do
+#	<Tratar $linea>
+# done
+#
+# Por ejemplo: ¿Qué hace este código?
+getent passwd | while read linea
+do
+	echo $linea | cut -d ":" -f 1
+done

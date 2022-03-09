@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Este shell script muestra el uso del for para recorrer
+# las entradas de un directorio a partir de un patrón
+
+# Mostrar todo el contenido del directorio /etc
+for i in "/etc/"*	 # NO DEBEN USARSE COMILLAS DOBLES EN EL PATRON, EN LA RUTA SI
+do
+	echo "$i"
+done

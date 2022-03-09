@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Este shell-script muestra valores que va tomando $# con distintos ejemplos
+# Se desea mostrar la importancia de usar comillas dobles y cómo afecta al número
+# de argumentos
+
+# NO LEER TODAVÍA EL CODIGO DE ESTE SHELL-SRIPT. PRIMERO EJECUTALO Y OBSERVA
+# LA SALIDA QUE PRODUCE
+# POSTERIORMENTE MIRA CON CALMA EL CÓDIGO
+
+echo "./ej01_NArgumentos"
+./ej01_NArgumentos
+echo ""
+echo "./ej01_NArgumentos arg1"
+./ej01_NArgumentos arg1
+echo ""
+echo './ej01_NArgumentos "arg1 arg2" arg3'
+./ej01_NArgumentos "arg1 arg2" arg3
+echo ""
+echo './ej01_NArgumentos "Esto es una prueba"'
+./ej01_NArgumentos "Esto es una prueba"

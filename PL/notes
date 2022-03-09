@@ -1,0 +1,12 @@
+2>/dev/null // salida nula
+>&2 // salida de error
+
+nano $? // imprime por pantalla el codigo de error del ultimo programa ejecutado
+for i in $* // recorre parametros separandolos por espacios, sin tener en cuenta comillas
+for i in "$@" // for i, para recorrer parametros
+for i in "/etc/"*, para recorrer directorios
+for i // recorrer parametros, forma optima y correcta
+
+!!! recuerda ; then en if, ; do en for y while
+
+read var // lo opuesto a echo, lee la entrada estandar

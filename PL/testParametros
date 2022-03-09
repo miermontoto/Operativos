@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+	echo "Ejecucion sin parametros"
+	exit 1
+fi
+if [ -r $1 ]; then
+	cat $1
+else
+	echo "No se puede leer el fichero." >&2
+	exit 1
+fi
+

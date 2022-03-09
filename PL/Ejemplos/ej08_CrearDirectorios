@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Este shell script muestra la ventaja de utilizar shell-scripts para
+# realizar operaciones masivas aprovechando el uso del for con listas de
+# palabras
+
+# Se crean los directorios personales de 10 usuarios y se copian a ellos
+# los ficheros necesarios para que entren correctamente en sesión
+# (los cuales se encuentran en /etc/skel)
+
+# PARA QUE ESTE SHELL-SCRIPT TE FUNCIONE DEBERÁS COPIARLO A TU DIRECTORIO PERSONAL
+
+sufijo="00 01 02 03 04 05 06 07 08 09"
+for i in $sufijo
+do
+	mkdir "Usuario$i"
+	cp -f /etc/skel/* "Usuario$i" 2>/dev/null	# La redirección es para que la copia sea silenciosa
+	cp -f /etc/skel/.* "Usuario$i" 2>/dev/null	# Para copiar también ficheros ocultos
+done

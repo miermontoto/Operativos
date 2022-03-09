@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Este shell script muestra el uso del if <comando>
+
+# ES IMPORTANTE SABER QUE LOS PREDICADOS EN SHELL-SCRIPT SON SIEMPRE LA
+# EJECUCION DE UN COMANDO (ya que todos devuelven CIERTO Ó FALSO)
+
+# Esto tiene que entrar por el else porque pepito no lo encuentra
+# y el grep devuelve FALSO
+if getent passwd | grep pepito
+then
+	echo "El usuario pepito PERTENECE al sistema."
+else
+	echo "El usuario pepito NO PERTENECE al sistema."
+fi
