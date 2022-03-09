@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+	echo "Numero de parametros incorrecto."
+	echo "USO: $0 <directorio> <numLineas>"
+	exit 1
+fi
+
+if [ ! -d $1 ]; then
+	echo "$1 no es un directorio valido."
+	exit 1
+fi
+
+echo "Los ficheros de texto que tiene mas de $2 lineas son:"
+./listFichAux "$1" "$2"
+exit 0

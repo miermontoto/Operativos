@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+	echo "Numero de parametros incorrecto."
+	echo "USO: $0 <fichero> <UIDbase>"
+	exit 1
+fi
+
+if [ ! -r $1 ]; then
+	echo "El archivo no existe o no se puede abrir."
+	exit 1
+fi
+
+
+uidBase=$2
+cat $1 | tail -n +2 | while read i; do
+	user=$(echo $i | cut -d@ -f1)
+	uid=$(./PrimerUIDLibre $uidBase)
+	uidBase=$(expr $uidBase + 1)
+	nombre=$(echo $i | cut -d ';' -f3)
+	apellidos=$(echo $i | cut -d ';' -f2)
+	comentario="$apellidos, $nombre"
+	gid=$(echo $i | cut -d ';' -f4)
+
+	echo "$user:x:$uid:$gid:$comentario:/bin/bash" >> passwd
+done
+exit 0

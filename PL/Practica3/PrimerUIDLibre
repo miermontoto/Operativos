@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+	echo "Numero de parametros incorrecto."
+	echo "USO: $0 <UIDbase>"
+	exit 1
+fi
+
+uid=0
+getent passwd | cut -d: -f 3 | sort -n | while read i; do
+	uid=$(expr $uid + 1)
+	if [ $uid -ge $1 -a $uid -ne $i ]; then
+		echo $uid
+		exit 0
+	fi
+	uid=$i
+done
+exit 0

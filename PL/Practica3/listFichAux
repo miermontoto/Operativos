@@ -1,0 +1,11 @@
+#!/bin/bash
+for i in "$1/"*; do
+	if [ -d $i ]; then
+		$0 $i $2
+	else
+		if [ -r $i -a $(cat $i | wc -l) -gt $2 ]; then
+			echo $i
+		fi
+	fi
+done
+exit 0

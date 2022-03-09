@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+	echo "Numero de parametros incorrecto."
+	echo "USO: $0 <fichero> <nomFruta>"
+	exit 1
+fi
+
+if [ ! -r $1 ]; then
+	echo "No se puede acceder al archivo $1."
+	exit 1
+fi
+
+echo "La fruta $2 se vendio los siguientes dias:"
+
+cat $1 | grep "^$2;" | while read i; do
+	kilos=$(echo $i | cut -d ';' -f3)
+	dia=$(echo $i | cut -d ';' -f2)
+	echo "El dia $dia se vendieron $kilos Kg."
+done
+exit 0

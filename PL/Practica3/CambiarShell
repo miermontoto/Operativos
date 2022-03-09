@@ -1,0 +1,25 @@
+#!/bin/bash
+if [ $# -ne 2 ]; then
+	echo "Numero de parametros incorrecto."
+	echo "USO: CambiarShell <usuario> <nuevo_shell>"
+	exit 1
+fi
+
+if [ $(cat passwd | cut -d: -f1 | grep -c $1) -eq 0 ]; then
+	echo "El usuario no existe."
+	exit 1
+fi
+
+if ! mv passwd passwd.bak; then
+	echo "No se pudo mover el archivo."
+	exit 1
+fi
+
+cat passwd.bak | while read i; do
+	user=$(echo $i | cut -d: -f 1-6)
+	if [ $(echo $i | grep -c "^$1:") -eq 0 ]; then
+		echo "$i" >> passwd
+	else
+		echo "$user:$2" >> passwd
+	fi
+done

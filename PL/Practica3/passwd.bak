@@ -1,0 +1,155 @@
+root:x:0:0:root:/root:aaaa
+daemon:x:1:1:daemon:/usr/sbin:aaaa
+bin:x:2:2:bin:/bin:aaaa
+sys:x:3:3:sys:/dev:aaaa
+sync:x:4:65534:sync:/bin:aaaa
+games:x:5:60:games:/usr/games:aaaa
+man:x:6:12:man:/var/cache/man:aaaa
+lp:x:7:7:lp:/var/spool/lpd:aaaa
+mail:x:8:8:mail:/var/mail:aaaa
+news:x:9:9:news:/var/spool/news:aaaa
+uucp:x:10:10:uucp:/var/spool/uucp:aaaa
+proxy:x:13:13:proxy:/bin:aaaa
+www-data:x:33:33:www-data:/var/www:aaaa
+backup:x:34:34:backup:/var/backups:aaaa
+list:x:38:38:Mailing List Manager:/var/list:aaaa
+irc:x:39:39:ircd:/var/run/ircd:aaaa
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:aaaa
+syslog:x:101:103::/home/syslog:aaaa
+messagebus:x:102:104::/var/run/dbus:aaaa
+sshd:x:103:65534::/var/run/sshd:aaaa
+pulse:x:104:111:PulseAudio daemon,,,:/var/run/pulse:aaaa
+usbmux:x:105:46:usbmux daemon,,,:/home/usbmux:aaaa
+rtkit:x:106:113:RealtimeKit,,,:/proc:aaaa
+alex:x:1000:1000:Alejandro Hernandez Arauzo,,,:/home/alex:aaaa
+nobody:x:65534:65534:nobody:/nonexistent:aaaa
+statd:x:107:65534::/var/lib/nfs:aaaa
+colord:x:108:116:colord colour management daemon,,,:/var/lib/colord:aaaa
+systemd-timesync:x:109:118:systemd Time Synchronization,,,:/run/systemd:aaaa
+systemd-network:x:110:119:systemd Network Management,,,:/run/systemd/netif:aaaa
+systemd-resolve:x:111:120:systemd Resolver,,,:/run/systemd/resolve:aaaa
+uuidd:x:100:101::/run/uuidd:aaaa
+_apt:x:113:65534::/nonexistent:aaaa
+nx:x:114:1003::/var/NX/nx:aaaa
+whoopsie:x:115:124::/nonexistent:aaaa
+avahi:x:116:125:Avahi mDNS daemon,,,:/var/run/avahi-daemon:aaaa
+avahi-autoipd:x:117:126:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:aaaa
+dnsmasq:x:118:65534:dnsmasq,,,:/var/lib/misc:aaaa
+gdm:x:119:128:Gnome Display Manager:/var/lib/gdm3:aaaa
+geoclue:x:120:129::/var/lib/geoclue:aaaa
+speech-dispatcher:x:121:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:aaaa
+hplip:x:122:7:HPLIP system user,,,:/var/run/hplip:aaaa
+kernoops:x:123:65534:Kernel Oops Tracking Daemon,,,:/:aaaa
+saned:x:124:130::/var/lib/saned:aaaa
+postfix:x:125:131::/var/spool/postfix:aaaa
+revueltapablo:x:1006:1001:Pablo Revuelta Sanz:/home/profesor/revueltapablo:aaaa
+cups-pk-helper:x:112:108:user for cups-pk-helper service,,,:/home/cups-pk-helper:aaaa
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:aaaa
+UO174273:x:2034:1002:Garcia Castro, Monica:/home/alumno/UO174273:aaaa
+rioangel:x:1007:1001:Ángel del Río Álvarez:/home/profesor/rioangel:aaaa
+UO263864:x:2037:1002:Fanjul García, Daniel:/home/alumno/UO263864:aaaa
+UO257482:x:2105:1002:Del Busto Elias, Marina:/home/alumno/UO257482:aaaa
+test:x:3201:3201::/home/test:aaaa
+UO279351:x:2001:1002:Álvarez Álvarez, Alberto:/home/alumno/UO279351:aaaa
+UO272077:x:2007:1002:Angulo Couso, Ignacio:/home/alumno/UO272077:aaaa
+UO277003:x:2008:1002:Asprón Rivero, Miguel:/home/alumno/UO277003:aaaa
+UO275984:x:2011:1002:Blanco Berbes, Guillermo:/home/alumno/UO275984:aaaa
+UO267804:x:2012:1002:Bores Díaz, Carlos:/home/alumno/UO267804:aaaa
+UO270657:x:2017:1002:Bravo Suárez, Carlos:/home/alumno/UO270657:aaaa
+UO269603:x:2019:1002:Bustamante Corominas, Álvaro:/home/alumno/UO269603:aaaa
+UO276476:x:2020:1002:Castañón González, Alonso:/home/alumno/UO276476:aaaa
+UO279226:x:2022:1002:Ceñera Fernández, Moisés:/home/alumno/UO279226:aaaa
+UO275890:x:2038:1002:Fernández Cuesta, Victoria:/home/alumno/UO275890:aaaa
+UO285479:x:2044:1002:Ferreira Amorim-trindade, Matheus:/home/alumno/UO285479:aaaa
+UO266457:x:2049:1002:García García, Iratxe:/home/alumno/UO266457:aaaa
+UO278271:x:2054:1002:Garnelo Fernández, Olai:/home/alumno/UO278271:aaaa
+UO270569:x:2056:1002:Gómez Taborcías, Andrés:/home/alumno/UO270569:aaaa
+UO277760:x:2063:1002:Guerrero González, Hugo:/home/alumno/UO277760:aaaa
+UO271365:x:2066:1002:Lubián De Vega, Lucas:/home/alumno/UO271365:aaaa
+UO277536:x:2068:1002:Martínez Sienra, Joel:/home/alumno/UO277536:aaaa
+UO277387:x:2073:1002:Menéndez Iglesias, Hugo:/home/alumno/UO277387:aaaa
+UO247382:x:2075:1002:Morales Cienfuegos, Fernando:/home/alumno/UO247382:aaaa
+UO269980:x:2078:1002:Nieto Marcos, Adrián:/home/alumno/UO269980:aaaa
+UO253209:x:2081:1002:Pérez Alonso, Jorge:/home/alumno/UO253209:aaaa
+UO266198:x:2086:1002:Regueiro López, Fidel:/home/alumno/UO266198:aaaa
+UO278382:x:2093:1002:Rodríguez Hernández, Iago:/home/alumno/UO278382:aaaa
+UO275963:x:2100:1002:San Juan Roces, Unai:/home/alumno/UO275963:aaaa
+UO270705:x:2104:1002:Santos Menéndez, Javier:/home/alumno/UO270705:aaaa
+UO265446:x:2106:1002:Santos Miguelez, David:/home/alumno/UO265446:aaaa
+UO276901:x:2108:1002:Suárez Marañón, Diego:/home/alumno/UO276901:aaaa
+UO285020:x:2000:1002:Acosta Valle, Jack-lee:/home/alumno/UO285020:aaaa
+UO273047:x:2002:1002:Afonso Fernández, Iván:/home/alumno/UO273047:aaaa
+UO269810:x:2003:1002:Alonso Barredo, Ángela:/home/alumno/UO269810:aaaa
+UO270848:x:2004:1002:Alonso González, David:/home/alumno/UO270848:aaaa
+UO282390:x:2005:1002:Álvarez Conde, Daniel:/home/alumno/UO282390:aaaa
+UO282558:x:2006:1002:Álvarez Inda, Eva:/home/alumno/UO282558:aaaa
+UO265217:x:2009:1002:Álvarez Lamas, Iván Roque:/home/alumno/UO265217:aaaa
+UO270573:x:2010:1002:Arango Argüelles, Martín:/home/alumno/UO270573:aaaa
+UO246195:x:2013:1002:Ares García, Francisco:/home/alumno/UO246195:aaaa
+UO276910:x:2014:1002:Argüelles Casares, Javier:/home/alumno/UO276910:aaaa
+UO275912:x:2015:1002:Ballesteros Terán, César:/home/alumno/UO275912:aaaa
+UO277061:x:2016:1002:Bango Chans, Miguel:/home/alumno/UO277061:aaaa
+UO285039:x:2018:1002:Benítez Zapico, Isidro:/home/alumno/UO285039:aaaa
+UO272465:x:2021:1002:Bercial Argüelles, Diego:/home/alumno/UO272465:aaaa
+UO276268:x:2023:1002:Braña Peralvo, Martín:/home/alumno/UO276268:aaaa
+UO270861:x:2024:1002:Canga Gómez, Hugo:/home/alumno/UO270861:aaaa
+UO273777:x:2025:1002:Castro Naveira, Alberto:/home/alumno/UO273777:aaaa
+UO253614:x:2026:1002:Cibota Lazar, Dumitru:/home/alumno/UO253614:aaaa
+UO283923:x:2027:1002:Cid Colino, Rodrigo:/home/alumno/UO283923:aaaa
+UO292893:x:2028:1002:Cochet , Maël:/home/alumno/UO292893:aaaa
+UO272563:x:2029:1002:Cofiño García, Aníbal:/home/alumno/UO272563:aaaa
+UO284226:x:2030:1002:Dago Sordo, Pablo Del:/home/alumno/UO284226:aaaa
+UO292992:x:2031:1002:Destombes , Eli:/home/alumno/UO292992:aaaa
+UO281896:x:2032:1002:Díaz Gutiérrez, Gaël:/home/alumno/UO281896:aaaa
+UO277070:x:2033:1002:Eraso Casas, Daniela:/home/alumno/UO277070:aaaa
+UO282056:x:2035:1002:Espinel Martín, Alba:/home/alumno/UO282056:aaaa
+UO284671:x:2036:1002:Fernández Tejero, César Nicolás:/home/alumno/UO284671:aaaa
+UO278594:x:2039:1002:Ferreira Garcel, Sergio:/home/alumno/UO278594:aaaa
+UO276441:x:2040:1002:Ferreras Menéndez, David:/home/alumno/UO276441:aaaa
+UO285577:x:2041:1002:Gallego Doncel, Alejandro:/home/alumno/UO285577:aaaa
+UO285048:x:2042:1002:García Concha, Antonio:/home/alumno/UO285048:aaaa
+UO284442:x:2043:1002:Gómez Villegas, Rafael Eduardo:/home/alumno/UO284442:aaaa
+UO271140:x:2045:1002:González Fernández, Diego:/home/alumno/UO271140:aaaa
+UO278967:x:2046:1002:González Hernández, Pablo:/home/alumno/UO278967:aaaa
+UO251895:x:2047:1002:González Mier, Jorge Luis:/home/alumno/UO251895:aaaa
+UO283276:x:2048:1002:González Pereira, María:/home/alumno/UO283276:aaaa
+UO282335:x:2050:1002:González Sancho, Laura:/home/alumno/UO282335:aaaa
+UO292894:x:2051:1002:Guillou , Faustine:/home/alumno/UO292894:aaaa
+UO279176:x:2052:1002:Jou González, Saúl:/home/alumno/UO279176:aaaa
+UO270610:x:2053:1002:Labrador Vázquez, Pablo:/home/alumno/UO270610:aaaa
+UO269910:x:2055:1002:Lafuente Suárez, David:/home/alumno/UO269910:aaaa
+UO281798:x:2057:1002:López Gala, Daniel:/home/alumno/UO281798:aaaa
+UO285381:x:2058:1002:Loureiro Peña, Jorge:/home/alumno/UO285381:aaaa
+UO272470:x:2059:1002:Lucas Plata, Luis Ángel De:/home/alumno/UO272470:aaaa
+UO283436:x:2060:1002:Martinez Ariznavarreta, Diego:/home/alumno/UO283436:aaaa
+UO282651:x:2061:1002:Martínez Ginzo, Rubén:/home/alumno/UO282651:aaaa
+UO283165:x:2062:1002:Mateos Suárez, Antón:/home/alumno/UO283165:aaaa
+UO285434:x:2064:1002:Mesa González, Marcos:/home/alumno/UO285434:aaaa
+UO283319:x:2065:1002:Mier Montoto, Juan Francisco:/home/alumno/UO283319:aaaa
+UO282383:x:2067:1002:Mieres Molinero, Diego:/home/alumno/UO282383:aaaa
+UO257653:x:2069:1002:Morales Martínez, Noel:/home/alumno/UO257653:aaaa
+UO277062:x:2070:1002:Muñiz García, Marcos:/home/alumno/UO277062:aaaa
+UO281838:x:2071:1002:Ovies Quintela, Miguel:/home/alumno/UO281838:aaaa
+UO269446:x:2072:1002:Palacios Pulido, Diego Alejandro:/home/alumno/UO269446:aaaa
+UO281879:x:2074:1002:Piedra Menéndez, Álvaro:/home/alumno/UO281879:aaaa
+UO282814:x:2076:1002:Piñera Villar, Daniel:/home/alumno/UO282814:aaaa
+UO271883:x:2077:1002:Poncelas Villabrille, Óscar:/home/alumno/UO271883:aaaa
+UO284127:x:2079:1002:Prado Rodríguez, Álvaro Guzmán:/home/alumno/UO284127:aaaa
+UO270031:x:2080:1002:Prieto Bargados, Daniel:/home/alumno/UO270031:aaaa
+UO257836:x:2082:1002:Rebordinos García, Marcos:/home/alumno/UO257836:aaaa
+UO281932:x:2083:1002:Revilla Hernández, Manuel:/home/alumno/UO281932:aaaa
+UO282574:x:2084:1002:Riego Lázaro, Miguel Del :/home/alumno/UO282574:aaaa
+UO285152:x:2085:1002:Río Villa, Diego Del:/home/alumno/UO285152:aaaa
+UO282895:x:2087:1002:Riva Fernández, Álvaro De La:/home/alumno/UO282895:aaaa
+UO271490:x:2088:1002:Rodriguez Bares, Silvia:/home/alumno/UO271490:aaaa
+UO265507:x:2089:1002:Rodríguez Fernández, Sara:/home/alumno/UO265507:aaaa
+UO281827:x:2090:1002:Rodríguez López, Alejandro:/home/alumno/UO281827:aaaa
+UO250906:x:2091:1002:Salgado Suárez, Adrián:/home/alumno/UO250906:aaaa
+UO257551:x:2092:1002:Serrano Prieto, Juan:/home/alumno/UO257551:aaaa
+UO278552:x:2094:1002:Suárez Corrales, Guillermo:/home/alumno/UO278552:aaaa
+UO246027:x:2095:1002:Tejerina Gutiérrez, Alba:/home/alumno/UO246027:aaaa
+UO233544:x:2096:1002:Vega Irribarra, Javier Andres:/home/alumno/UO233544:aaaa
+UO264664:x:2097:1002:Velasco Álvarez, Víctor:/home/alumno/UO264664:aaaa
+UO263807:x:2098:1002:Vergara Prieto, José David:/home/alumno/UO263807:aaaa
+./CrearUsuario:x:UO283318:1009:1000:/home/./CrearUsuario:aaaa
+UO283318:x:1009:1000:asdffda:/home/UO283318:aaaa

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+	echo "Numero de parametros incorrecto."
+	echo "USO: $0 <limiteInferior> <limiteSuperior>"
+	exit 1
+fi
+
+if [ $1 -ge $2 ]; then
+	echo "El limite inferior no puede ser mayor que el limite superior."
+	exit 1
+fi
+
+echo "Los comandos que estan consumiendo entre $1 y $2 bytes de memoria son:"
+ps uaxw | tail -n +2 | tr -s ' ' | while read i; do
+	mem=$(echo $i | cut -d ' ' -f5)
+	if [ $mem -gt $1 -a $mem -lt $2 ]; then
+		echo $i | cut -d ' ' -f11-
+	fi
+done
+exit 0
