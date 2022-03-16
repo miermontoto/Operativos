@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+if [ $# -ne 1 ]; then
+	echo "Número de parámetros incorrecto."
+	echo "USO: $0 <uid_mínimo>"
+	exit 1
+fi
+
+echo "Los alumnos cuyo UID es superior a $1 es:"
+getent passwd | cut -d: -f3-5 | sort -n -t: -k1 | while read i; do
+	uid=$(echo $i | cut -d: -f1)
+	gid=$(echo $i | cut -d: -f2)
+	name=$(echo $i | cut -d: -f3)
+	if [ $gid -eq 1002 -a $uid -gt $1 ]; then
+		echo "$name, con UID $uid"
+	fi
+done
+exit 0

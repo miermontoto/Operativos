@@ -1,0 +1,41 @@
+#!/bin/bash
+
+if [ $# -ne 3 ]; then
+	echo "Número incorrecto de parámetros."
+	echo "USO: $0 <tipo> <puertoInicial> <puertoFinal>"
+	exit 1
+fi
+
+if [ $2 -gt $3 ]; then
+	echo "El puerto inicial debe de ser mayor o igual que el puerto final."
+	exit 1
+fi
+
+if [ -f /tmp/ports.tmp ]; then
+	rm /tmp/ports.tmp >/dev/null
+	# Si ya existe el archivo temporal, se borra.
+fi
+
+echo "Los puertos libres entre $2 y $3 son:"
+
+# Primero se selecciona una lista con los puertos ocupados que cumplan el criterio.
+getent services | tr -s ' ' | cut -d ' ' -f2 | while read i; do
+	type=$(echo $i | cut -d/ -f2)
+	port=$(echo $i | cut -d/ -f1)
+	if [ $type = $1 -a $port -ge $2 -a $port -le $3 ]; then
+		#echo "Encontrado puerto $port"
+		echo "$port" >> /tmp/ports.tmp
+	fi
+done
+
+# Después, se escriben todos los valores en el intervalo que no formen parte de dicha lista.
+var=$2
+while [ $var -lt $3 ]; do
+	if [ $(cat /tmp/ports.tmp | grep -c "^$var$") -eq 0 ]; then
+		echo $var
+	fi
+	var=$(expr $var + 1)
+done
+
+rm /tmp/ports.tmp # Finalmente, se borra el archivo temporal.
+exit 0

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+	echo "Número de parámetros incorrecto."
+	echo "USO: $0 <usuario>"
+	exit 1
+fi
+
+if [ $(getent passwd | cut -d: -f1 | grep -c $1) -eq 0 ]; then
+	echo "El usuario no existe."
+	exit 1
+fi
+
+userProcesses=$(ps auwx | tr -s ' ' | cut -d ' ' -f 1,7 | grep "^$1 pts/" | wc -l)
+userTerminals=$(ps auwx | tr -s ' ' | cut -d ' ' -f 1,7 | grep "^$1 pts/" | cut -d ' ' -f2 | cut -d/ -f2 | sort -n | uniq | wc -l)
+echo "El usuario $1 está ejecutando $userProcesses procesos en $userTerminals terminales distintos"
