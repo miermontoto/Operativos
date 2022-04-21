@@ -135,6 +135,7 @@ int main() {
        if (pid_hijo == 0) {
           // Código del hijo
           execvp(comando_argv[0], comando_argv);
+          cout << "Error al ejecutar el comando " << comando_argv[0] << endl;
           exit(EXIT_FAILURE);
        }
        // Código del padre
