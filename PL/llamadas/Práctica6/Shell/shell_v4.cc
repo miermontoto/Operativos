@@ -11,6 +11,7 @@
 using namespace std;
 
 #define MAX_ARGUMENTOS 20
+string el_prompt = "$";
 
 unsigned ObtieneArgumentos(string comando, char *argv[]) {
   // NECESITA: Un sring con la linea de entrada (o comando del usuario)
@@ -143,6 +144,22 @@ bool ComandoInterno(int mi_argc, char *mi_argv[]) {
       return true;
    } // Del comando interno cd
 
+   if(strcmp(mi_argv[0], "echo") == 0) {
+      // Imprime por pantalla el texto que se le pasa como argumento
+      for (int i=1; i<mi_argc; i++) {
+         cout << mi_argv[i] << " ";
+      }
+      cout << endl;
+
+      return true;
+   }
+
+   // implementar `prompt`
+   if(strcmp(mi_argv[0], "prompt") == 0) {
+      el_prompt = mi_argv[1];
+      return true;
+   }
+
    // Llega aquí si no entró por ninguno de los if anteriores 
    // (por ningún comando interno)
    return false;
@@ -150,7 +167,6 @@ bool ComandoInterno(int mi_argc, char *mi_argv[]) {
 
 int main() {
   string comando;
-  string el_prompt="$";
   char *comando_argv[MAX_ARGUMENTOS];
   int n_args, pid_hijo;
 
