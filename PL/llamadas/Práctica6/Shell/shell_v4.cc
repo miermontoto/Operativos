@@ -12,6 +12,8 @@ using namespace std;
 
 #define MAX_ARGUMENTOS 20
 string el_prompt = "$";
+char* comandosProhibidos[99];
+int numComandosProhibidos = 0;
 
 unsigned ObtieneArgumentos(string comando, char *argv[]) {
   // NECESITA: Un sring con la linea de entrada (o comando del usuario)
@@ -123,6 +125,21 @@ bool ComandoInterno(int mi_argc, char *mi_argv[]) {
    if (strcmp(mi_argv[0], "exit") == 0 || strcmp(mi_argv[0], "logout") == 0)
       exit(EXIT_SUCCESS);
 
+   for(int i = 0; i < numComandosProhibidos && numComandosProhibidos != 0; i++) {
+      if(strcmp(mi_argv[0], comandosProhibidos[i]) == 0) {
+         cout << "El comando " << mi_argv[0] << " está prohibido y no se puede ejecutar." << endl;
+         return true;
+      }
+   }
+
+   if (strcmp(mi_argv[0], "leer_prohibidos")==0) {
+      for(int i = 0; i < numComandosProhibidos; i++) {
+         cout << comandosProhibidos[i] << endl;
+      }
+      
+      return true;
+   }
+
    if (strcmp(mi_argv[0], "cd")==0) {
       char *newdir;
       
@@ -151,6 +168,19 @@ bool ComandoInterno(int mi_argc, char *mi_argv[]) {
       }
       cout << endl;
 
+      return true;
+   }
+
+   if(strcmp(mi_argv[0], "prohibir") == 0) {
+      for (int i=1; i<mi_argc; i++) {
+         if(strcmp(mi_argv[0], "permitir_todo") != 0) comandosProhibidos[numComandosProhibidos] = mi_argv[i];
+         numComandosProhibidos++;
+      }
+      return true;
+   }
+
+   if(strcmp(mi_argv[0], "permitir_todo") == 0) {
+      numComandosProhibidos = 0;
       return true;
    }
 
